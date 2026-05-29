@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 420"
+     role="img"
+     aria-labelledby="jr-title jr-desc">
+  <title id="jr-title">Just-Rite Descender — Side View and Detail</title>
+  <desc id="jr-desc">
+    Two-panel technical diagram of a Just-Rite Descender. The left panel
+    is a side view of a utility pole anchored in the ground. A dynamic
+    kernmantle rope, shown as a dashed line, comes from above and to
+    the right, is threaded back and forth through a vertical series of
+    holes drilled through the pole, and continues downward on the far
+    side. The threading creates friction for a controlled rappel. Two
+    leader-line labels identify "Dynamic kernmantle rope threaded
+    through holes" and "Utility pole". The right panel is a face-on
+    detail of the same pole, showing three drilled holes arranged
+    vertically near the top.
+  </desc>
+
+  <defs>
+    <style>
+      svg { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+      text { font-size: 13px; fill: #000; }
+      .panel-label { font-size: 15px; font-weight: 700; letter-spacing: 0.04em; }
+      .figure-title { font-size: 15px; font-weight: 700; letter-spacing: 0.04em; }
+      .pole { fill: #fff; stroke: #000; stroke-width: 1.5; }
+      .rope { fill: none; stroke: #000; stroke-width: 1.4; stroke-dasharray: 5 3; }
+      .connector { stroke: #000; stroke-width: 1; fill: none; }
+      .ground { stroke: #000; stroke-width: 1.2; fill: none; }
+    </style>
+    <marker id="arrow-head" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Left panel: Side View ===== -->
+
+  <!-- Pole (side view) -->
+  <path class="pole" d="M 210,40 L 210,310 L 252,310 L 252,40 L 244,22 L 218,22 Z"/>
+
+  <!-- Rope: comes from upper right, threads through pole, exits down -->
+  <path class="rope"
+        d="M 305,18
+           L 200,90
+           L 260,140
+           L 180,180"/>
+
+  <!-- Ground under side view -->
+  <line x1="175" y1="310" x2="290" y2="310" class="ground"/>
+  <path class="ground"
+        d="M 180,310 L 170,328
+           M 200,310 L 190,328
+           M 220,310 L 210,328
+           M 240,310 L 230,328
+           M 260,310 L 250,328
+           M 280,310 L 270,328"/>
+
+  <!-- Labels (left side) -->
+  <foreignObject x="6" y="140" width="160" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial; font-size: 14px;">
+      Dynamic Kernmantle Rope Threaded Through Holes
+    </div>
+  </foreignObject>
+  <line x1="10" y1="145" x2="208" y2="100"
+        class="connector" marker-end="url(#arrow-head)"/>
+
+  <text x="6" y="252">Utility Pole</text>
+  <line x1="90" y1="248" x2="208" y2="270"
+        class="connector" marker-end="url(#arrow-head)"/>
+
+  <!-- Panel label -->
+  <text x="170" y="358" class="panel-label">Side View</text>
+  <text x="370" y="358" class="panel-label">Detail</text>
+
+  <!-- ===== Right panel: Detail (face view) ===== -->
+
+  <!-- Pole face -->
+  <path class="pole" d="M 370,40 L 370,310 L 410,310 L 410,40 L 402,22 L 378,22 Z"/>
+
+  <!-- Three holes -->
+  <circle cx="390" cy="60"  r="4" fill="#fff" stroke="#000" stroke-width="1"/>
+  <circle cx="390" cy="130" r="4" fill="#fff" stroke="#000" stroke-width="1"/>
+  <circle cx="390" cy="150" r="4" fill="#fff" stroke="#000" stroke-width="1"/>
+
+  <!-- Ground under detail -->
+  <line x1="340" y1="310" x2="445" y2="310" class="ground"/>
+  <path class="ground"
+        d="M 345,310 L 335,328
+           M 365,310 L 355,328
+           M 385,310 L 375,328
+           M 405,310 L 395,328
+           M 425,310 L 415,328
+           M 445,310 L 435,328"/>
+</svg>

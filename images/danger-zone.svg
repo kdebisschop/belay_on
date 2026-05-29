@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 980 600"
+     role="img"
+     aria-labelledby="dz-title dz-desc">
+  <title id="dz-title">Comfort, Educational, and Danger Zones</title>
+  <desc id="dz-desc">
+    A diagram of three concentric circles. The innermost solid circle is
+    labeled "Comfort Zone — You are here." Surrounding it is a dashed
+    circle showing a potential expanded comfort zone, with four small
+    grey arrows pointing outward from the comfort zone. The dashed
+    circle sits inside a larger ring labeled "Educational Zone", and
+    that ring sits inside an outer ring labeled "Danger Zone". A
+    callout on the right says "New experiences that are not too
+    overwhelming create a new comfort zone," with an arrow pointing to
+    the dashed expanded-comfort-zone. A callout on the left says "Big
+    jumps out of the educational zone = No learning," and two long
+    black arrows extend from the comfort-zone area down and outward
+    past the danger zone to illustrate jumps that overshoot the
+    educational zone.
+  </desc>
+
+  <defs>
+    <style>
+      svg { font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      text { fill: #000; }
+      .zone-label { font-size: 30px; font-weight: 700; letter-spacing: 0.02em; }
+      .center-label { font-size: 15px; text-anchor: middle; }
+      .callout-box { fill: #fff; stroke: #000; stroke-width: 1.2; }
+      .callout-text { font-size: 16px; }
+      .ring { fill: #fff; stroke: #000; stroke-width: 2; }
+      .ring-dashed { fill: none; stroke: #555; stroke-width: 1.6; stroke-dasharray: 8 5; }
+      .arrow-grey { stroke: #888; stroke-width: 2.5; fill: none; }
+      .arrow-black { stroke: #000; stroke-width: 2; fill: none; }
+      .connector { stroke: #000; stroke-width: 1.2; fill: none; }
+    </style>
+
+    <marker id="grey-head" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+    <marker id="black-head" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+
+    <!-- Arcs for curved labels: draw upper half so text sits along top -->
+    <path id="danger-arc" d="M 280,320 A 1,1 0 0 1 680,320" fill="none"/>
+    <path id="education-arc" d="M 320,320 A 1,1 0 0 1 640,320" fill="none"/>
+  </defs>
+
+  <!-- Rings (outer first, inner last) -->
+  <circle cx="480" cy="320" r="190" class="ring"/>
+  <circle cx="480" cy="320" r="110" class="ring-dashed"/>
+  <circle cx="480" cy="320" r="60"  class="ring"/>
+
+  <!-- Curved zone labels -->
+  <text class="zone-label">
+    <textPath href="#danger-arc" startOffset="50%" text-anchor="middle">Danger Zone</textPath>
+  </text>
+  <text class="zone-label" style="font-size:24px">
+    <textPath href="#education-arc" startOffset="50%" text-anchor="middle">Educational Zone</textPath>
+  </text>
+
+  <!-- Center labels -->
+  <text x="480" y="316" class="center-label">Comfort Zone</text>
+  <text x="480" y="335" class="center-label">You are here.</text>
+
+  <!-- Four grey outward arrows from the comfort zone -->
+  <line x1="523" y1="277" x2="554" y2="246" class="arrow-grey" marker-end="url(#grey-head)"/>
+  <line x1="437" y1="277" x2="406" y2="246" class="arrow-grey" marker-end="url(#grey-head)"/>
+  <line x1="523" y1="362" x2="554" y2="394" class="arrow-grey" marker-end="url(#grey-head)"/>
+  <line x1="437" y1="362" x2="406" y2="394" class="arrow-grey" marker-end="url(#grey-head)"/>
+
+  <!-- Two long black "big jumps" arrows passing out of the danger zone -->
+  <line x1="427" y1="350" x2="245" y2="495" class="arrow-black" marker-end="url(#black-head)"/>
+  <line x1="533" y1="350" x2="715" y2="495" class="arrow-black" marker-end="url(#black-head)"/>
+
+  <!-- Right callout: connects to the dashed expanded comfort zone -->
+  <line x1="534" y1="270" x2="700" y2="270" class="connector"/>
+  <rect x="700" y="225" width="240" height="90" rx="2" class="callout-box"/>
+  <foreignObject x="720" y="245" width="200" height="70">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial; font-size: 14px;">
+      → New experiences that are not too overwhelming create a new comfort zone.
+    </div>
+  </foreignObject>
+
+  <!-- Left callout: refers to the long black "big jumps" arrows -->
+  <line x1="280" y1="395" x2="349" y2="409" class="connector"/>
+  <rect x="20" y="355" width="260" height="70" rx="2" class="callout-box"/>
+  <foreignObject x="40" y="375" width="220" height="50">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial; font-size: 14px;">
+      ← Big jumps out of the educational zone = No learning
+    </div>
+  </foreignObject>
+</svg>

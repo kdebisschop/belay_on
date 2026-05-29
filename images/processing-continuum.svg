@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 520"
+     role="img"
+     aria-labelledby="pc-title pc-desc">
+  <title id="pc-title">Processing Continuum</title>
+  <desc id="pc-desc">
+    Horizontal continuum with four tick marks marking processing
+    techniques from least to most facilitator-directed: (1) "Mountains
+    speak for themselves; so do canyons" — the experience is left to
+    stand on its own; (2) "Spontaneous contributions — facilitator may
+    need to frame invitation" — participants share when prompted;
+    (3) "Questions — oral or written; dyads/triads, rounds" — structured
+    discussion formats; (4) "Metaphors and tools" — explicit framing
+    devices supplied by the facilitator.
+  </desc>
+
+  <defs>
+    <style>
+      .axis { stroke: #000; stroke-width: 4; stroke-linecap: butt; }
+      .tick { stroke: #000; stroke-width: 5; stroke-linecap: butt; }
+      .label {
+        font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        color: #000;
+        white-space: nowrap;
+        line-height: 1.2;
+      }
+    </style>
+  </defs>
+
+  <!-- Horizontal continuum line -->
+  <line class="axis" x1="80"  y1="465" x2="820" y2="465"/>
+
+  <!-- Tick marks -->
+  <line class="tick" x1="80"  y1="430" x2="80"  y2="500"/>
+  <line class="tick" x1="320" y1="430" x2="320" y2="500"/>
+  <line class="tick" x1="560" y1="430" x2="560" y2="500"/>
+  <line class="tick" x1="820" y1="430" x2="820" y2="500"/>
+
+  <!-- Labels: HTML divs inside foreignObject, rotated -65° around the
+       top of each tick. Width is large + nowrap so the text stays on
+       one line. -->
+  <g transform="translate(80 430) rotate(-65)">
+    <foreignObject x="12" y="-22" width="600" height="32">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="label">Mountains speak for themselves; so do canyons</div>
+    </foreignObject>
+  </g>
+  <g transform="translate(320 430) rotate(-65)">
+    <foreignObject x="12" y="-22" width="600" height="32">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="label">Spontaneous contributions—facilitator may need to frame invitation</div>
+    </foreignObject>
+  </g>
+  <g transform="translate(560 430) rotate(-65)">
+    <foreignObject x="12" y="-22" width="600" height="32">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="label">Questions—oral or written; dyads/triads, rounds</div>
+    </foreignObject>
+  </g>
+  <g transform="translate(820 430) rotate(-65)">
+    <foreignObject x="12" y="-22" width="600" height="32">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="label">Metaphors and tools</div>
+    </foreignObject>
+  </g>
+</svg>
